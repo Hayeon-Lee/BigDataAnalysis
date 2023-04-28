@@ -93,3 +93,12 @@
     - 결정트리
     - 분류 성능 지표
     - encoding
+
+<br/>
+
+9.  clustering
+
+    - clustering 개념
+    - k-means clustering
+    - 최적의 k값 찾기
+    - iris 데이터로 실습하기
