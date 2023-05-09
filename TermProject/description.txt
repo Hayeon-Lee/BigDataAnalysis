@@ -1,86 +1,40 @@
 빅데이터 분석 텀 프로젝트 과제 입니다.
 
 1. 프로젝트 주제 (해결하려는 문제와 목표)
-	1) 문제 정의
-		- 어떤 새로운 사실의 발견
-		- 어떤 가설의 확인
-		- 머신 러닝
+	1) 문제와 목표 정의
+		<목표>
+		- 실시간 영상으로 사람의 얼굴이 입력될 때, 이 사람이 졸았는지 졸지 않았는지를 판별하는 머신러닝 모델을 만든다.
+
+		<문제>
+		- 이차원 데이터인 눈 사진 데이터를 어떻게 분석 가능한 데이터로 변환하기
+		- 실시간 탐지가 가능한 속도의 모델을 제작하기
 
 	2) 배경과 필요성
+		- 최근에 연휴기간동안 아버지께서 운전을 하시는데 운전을 하시면서 졸음때문에 힘들어하셨다.
+		- 23년 기준 졸음운전 사망률 4.51%, 1035명 중 70%가 졸음운전으로 사고 발생 (https://www.hidomin.com/news/articleView.html?idxno=466557)
+		- 졸음운전 예방책 및 캠페인은 매번 꾸준히 나오지만 봄철과 연휴철엔 끊임없이 발생율이 증가한다(https://www.koroad.or.kr/main/board/6/87847/board_view.do?&cp=1&listType=list&bdOpenYn=Y&bdNoticeYn=N)
 
 	3) 이외 빅데이터 활용방안 예시 제시
+		- 해당 데이터와 동공 크기 데이터, 입 모양 데이터를 함께 분석할 시 졸음 예측 모델도 제작할 수 있다.
+		- 이 기능을 가진 어플리케이션을 출시할 시, 휴대폰에 있는 GPS와 사고다발구역 정보 제공 API, 졸음쉼터 데이터를 연동하여 사고다발구역을 지나갈 때 졸음쉼터가 있다고 경고를 해주거나
+		졸음운전이라 판별하는 기준을 좀 더 엄격하게 조정할 수 있다.
 
 	4) 프로젝트 결과로 얻게 되는 것 (알게 되는 것) 무엇인지
+		- 
+		- 
+		- 
 
 2. 사용 예정 데이터
 	1) 데이터 스펙 (크기, 레코드 수)
+		- 눈을 감은 사진(png, 평균 크기 2.5KB) 2,000장 
+		- 눈을 뜬 사진(png, 평균 크기 2.5KB) 2,000장
+		- 각 데이터셋마다 360장은 안경을 쓰고 있고, 빛의 밝기도 다양한 데이터셋입니다.
+		- 총 4,000 장의 사진을 분석하고, 학습시킬 예정입니다.
+
 	2) 데이터 확보 방안
+		- kaggles라는 dataset 을 제공해주는 사이트에서 확보하였습니다.
 
 3. 분석 계획
-
-<장애우 전용 길찾기>
-
-1. 장애우 사회복지 시설 길찾기, 평점
-    1) 장애우가 특정 사회복지시설에 가고 싶어할 때, 장애우 편의 시설이 잘 되어 있는 곳 위주의 길찾기
-    2) 장애우 편의 시설의 정보 display 해주기 (평점, 어떤 것이 있는지...)
-    3) 
-
-2.
-
-
-3.
-
-
-
-[사용할 데이터]
-
-<서울 열린 데이터 광장>
-1) 장애인 편의 시설
-* 서울시 장애인 도서관 현황정보
-: https://data.seoul.go.kr/dataList/OA-15476/S/1/datasetView.do
-
-
-* 서울시 사회복지시설(장애인지역사회재활시설) 목록
-: https://data.seoul.go.kr/dataList/OA-20429/S/1/datasetView.do
-
-
-* 서울시 사회복지시설(장애인직업재활시설) 목록
-: https://data.seoul.go.kr/dataList/OA-20430/S/1/datasetView.do
-
-
-* 서울시 사회복지시설(장애인거주시설) 목록
-: https://data.seoul.go.kr/dataList/OA-20425/S/1/datasetView.do
-
-
-* 서울시 사회복지시설(장애인의료재활시설) 목록
-: https://data.seoul.go.kr/dataList/OA-20428/S/1/datasetView.do
-
-
-* 서울시 사회복지시설(장애인생산품판매시설) 목록 
-: https://data.seoul.go.kr/dataList/OA-20427/S/1/datasetView.do
-
-
-* 서울시 사회복지시설(장애인기타) 목록
-: https://data.seoul.go.kr/dataList/OA-20426/S/1/datasetView.do
-
-
-
-2) 교통 수단
-* 서울시 지하철 역사 노약자 장애인 편의시설 현황
-: https://data.seoul.go.kr/dataList/OA-11573/S/1/datasetView.do
-
-* 서울시 장애인 지하철 편의시설 정보
-: https://data.seoul.go.kr/dataList/OA-15514/S/1/datasetView.do
-
-* 장애인 콜 시스템
-: http://data.seoul.go.kr/dataList/OA-15558/A/1/datasetView.do
-
-
-
-<공공 데이터 포털>
-* 서울교통공사_역별 월별 장애인 승하차인원 정보 ~2022/08
-: https://www.data.go.kr/tcs/dss/selectDataSetList.do?keyword=%EC%84%9C%EC%9A%B8%EA%B5%90%ED%86%B5%EA%B3%B5%EC%82%AC_%EC%97%AD%EB%B3%84+%EC%9B%94%EB%B3%84+%EC%9E%A5%EC%95%A0%EC%9D%B8+%EC%8A%B9%ED%95%98%EC%B0%A8%EC%9D%B8%EC%9B%90+%EC%A0%95%EB%B3%B4
-
-* 한국 문화 정보원_전국 배리어프리 문화예술 관광지
-: https://www.data.go.kr/data/15111386/fileData.do
-
+	1) CNN?
+	2) opencv
+	3) ?
